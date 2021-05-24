@@ -96,7 +96,7 @@ def define_schema(field, name):
 
 def build_schema(schema):
     SCHEMA = []
-    if schema['properties']:
+    if 'properties' in schema:
     
         for key in schema['properties'].keys():
 
