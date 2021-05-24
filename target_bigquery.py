@@ -96,14 +96,16 @@ def define_schema(field, name):
 
 def build_schema(schema):
     SCHEMA = []
-    for key in schema['properties'].keys():
-        
-        if not (bool(schema['properties'][key])):
-            # if we endup with an empty record.
-            continue
+    if schema['properties']
+    
+        for key in schema['properties'].keys():
 
-        schema_name, schema_type, schema_mode, schema_description, schema_fields = define_schema(schema['properties'][key], key)
-        SCHEMA.append(SchemaField(schema_name, schema_type, schema_mode, schema_description, schema_fields))
+            if not (bool(schema['properties'][key])):
+                # if we endup with an empty record.
+                continue
+
+            schema_name, schema_type, schema_mode, schema_description, schema_fields = define_schema(schema['properties'][key], key)
+            SCHEMA.append(SchemaField(schema_name, schema_type, schema_mode, schema_description, schema_fields))
 
     return SCHEMA
 
